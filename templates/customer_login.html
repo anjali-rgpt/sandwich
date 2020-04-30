@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Login</title>
+</head>
+
+<body>
+    <h1> Log In to The Club Sandwich account to place orders</h1>
+    <form id="log_form" class="forminput" method="POST" action="http://localhost:8081/login">
+
+        <div class="form-field">
+            <h3>Email</h3>
+            <input id="loginemail" name="email" class="input" type="email" required />
+        </div>
+        <br>
+        <div class="form-field">
+            <h3>Phone number</h3>
+            <input id="loginphone" name="phone" class="input" type="number" required />
+        </div>
+        <div class="form-field">
+            <h3>Password</h3>
+            <input id="loginpass" name="loginpass" class="input" type="password" required />
+        </div>
+
+        <br>
+        <input id="loginsubmit" class="button" type="submit" name="loginsubmit" value="Log In" />
+
+    </form>
+</body>
+
+</html>

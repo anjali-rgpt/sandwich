@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invalid Page</title>
+
+    <style>
+        h1 {
+            color: red;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1> Invalid Credentials. </h1>
+{% if error == "nullspace"  %}
+<h4> Please go back and fill all the details.</h4>
+
+{% else if error == "alpha"  %}
+<h4> First name and last name should be alphabetical</h4>
+
+{% else if error == "phone"  %}
+<h4> Invalid phone format</h4>
+
+{% else if error == "email"  %}
+<h4> Invalid email format</h4>
+
+{% else %}
+<h4> Please type the correct credentials</h4>
+
+{% endif %}
+    
+</body>
+</html>

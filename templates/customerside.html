@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Order Page - Sides</title>
+</head>
+
+<body>
+    <h1> Build your Order!</h1>
+    <form id="reg_form" class="forminput" method="POST" action="http://localhost:8081/sides">
+        <div class="form_description">
+            <h2>Select sides</h2>
+        </div>
+        <br>
+
+
+        <div class="form-field">
+            <h3>Sides</h3>
+            <label for="drinks">Choose a side </label>
+            <div class="selection">
+                <select name="sides">
+                    { % for key,value in sides.items() %}
+                    <option value={{key}}>{{key}} - {{value}}</option>
+                    { % endfor %}
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="form-field"></div>
+        <span>
+            <input id="fries" name="side" class="radio" type="radio" />
+            <label class="choice" for="element_1_1">Fries</label>
+            <input id="perifries" name="side" class="radio" type="radio" />
+            <label class="choice" for="perifries">Peri peri fries</label>
+            <input id="chzfries" name="side" class="radio" type="radio" />
+            <label class="choice" for="chzfries">Cheese fries</label>
+            <input id="tots" name="side" class="radio" type="radio" />
+            <label class="choice" for="tots">Tater tots</label>
+            <input id="wedge" name="side" class="radio" type="radio" />
+            <label class="choice" for="wedge">Potato Wedges</label>
+            <input id="none" name="side" class="radio" type="radio" />
+            <label class="choice" for="none">None</label>
+
+        </span>
+        </div>
+
+        <br>
+
+
+        <div class="form-field">
+            <h3>Quantity</h3>
+            <input id="sideqty" name="sideqty" class="input" type="number" />
+
+        </div>
+        <br>
+        <div class="form-field">
+            <span class="button-body">
+                <input type="submit" name="order" value="Add to Cart">
+            </span>
+            <span class="button-body">
+                <input type="submit" name="order" value="Checkout->">
+            </span>
+        </div>
+        <br>
+    </form>
+</body>
+
+</html>

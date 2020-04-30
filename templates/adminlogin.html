@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+</head>
+
+<body>
+    <h1> Enter your administrator credentials</h1>
+    <form id="log_form" class="forminput" method="POST" action="http://localhost:8081/adminlogin">
+
+        <div class="form-field">
+            <h3>username</h3>
+            <input id="username" name="username" class="input" type="text" required />
+        </div>
+        <br>
+        
+        <div class="form-field">
+            <h3>Password</h3>
+            <input id="adminpass" name="adminpass" class="input" type="password" required />
+        </div>
+
+        <br>
+        <input id="adminsubmit" class="button" type="submit" name="adminsubmit" value="Log In" />
+
+    </form>
+</body>
+
+</html>

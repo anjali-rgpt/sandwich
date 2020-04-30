@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Order Page - Drinks</title>
+</head>
+
+<body>
+    <h1> Build your Order!</h1>
+    <form id="reg_form" class="forminput" method="POST" action="http://localhost:8081/drinks">
+        <div class="form_description">
+            <h2>Select drinks</h2>
+        </div>
+        <br>
+
+
+        <div class="form-field">
+            <h3>Drinks</h3>
+            <label for="drinks">Choose a drink </label>
+            <div class="selection">
+                <select name="beverages">
+                    { % for key,value in beverages.items() %}
+                    <option value={{key}}>{{key}} - {{value}}</option>
+                    { % endfor %}
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="form-field"></div>
+        <span>
+            <input id="coke" name="bev" class="radio" type="radio" />
+            <label class="choice" for="coke">Coke</label>
+            <input id="sprite" name="bev" class="radio" type="radio" />
+            <label class="choice" for="sprite">Sprite</label>
+            <input id="fanta" name="bev" class="radio" type="radio" />
+            <label class="choice" for="fanta">Fanta</label>
+            <input id="maaza" name="bev" class="radio" type="radio" />
+            <label class="choice" for="maaza">Maaza</label>
+            <input id="none" name="bev" class="element radio" type="radio" value="5" />
+            <label class="choice" for="none">None</label>
+
+        </span>
+        </div>
+
+        <br>
+
+
+<div class="form-field">
+    <h3>Quantity</h3>
+    <input id="drinkqty" name="drinkqty" class="input" type="number" />
+
+</div>
+<br>
+        <div class="form-field">
+            <span class="button-body">
+                <input type="submit" name="order" value="Add to Cart">
+            </span>
+            <span class="button-body">
+                <input type="submit" name="order" value="Sides ->">
+            </span>
+        </div>
+        <br>
+    </form>
+</body>
+
+</html>

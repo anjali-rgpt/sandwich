@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Stock</title>
+</head>
+
+<body>
+    <h1> Admin Add Stock</h1>
+    <form id="stock" class="forminput" method="POST" action="http://localhost:8081/addstock">
+        <div class="form_description">
+            <h2>Add your stock of ingredients</h2>
+        </div>
+        <br>
+
+        <div class="form-field">
+            <h3>Ingredient Name</h3>
+            <input id="ingredient" name="ingredient" class="input" type="text" />
+
+        </div>
+        <br>
+
+        <fieldset>
+            <legend>
+                <h3>Category</h3>
+            </legend>
+
+            <input id="bread" name="category" class="radio" type="radio" value="bread" />
+            <label class="choice" for="bread">Bread</label>
+            <input id="condiment" name="category" class="radio" type="radio" value="condiment" />
+            <label class="choice" for="condiment">Condiment</label>
+            <input id="drink" name="category" class="radio" type="radio" value="drink" />
+            <label class="choice" for="drink">Drink</label>
+            <input id="fillnonveg" name="category" class="radio" type="radio" value="fillnonveg" />
+            <label class="choice" for="fillnonveg">Filling(Non-Veg)</label>
+            <input id="fillveg" name="category" class="radio" type="radio" value="fillveg" />
+            <label class="choice" for="fillveg">Filling(Veg)</label>
+            <input id="side" name="category" class="radio" type="radio" value="side" />
+            <label class="choice" for="side">Side</label>
+            <input id="vegetable" name="category" class="radio" type="radio" value="vegetable" />
+            <label class="choice" for="vegetable">Vegetable</label>
+
+        </fieldset>
+        <br>
+
+        <div class="form-field">
+            <h3>Quantity</h3>
+            <input id="qty" name="qty" class="input" type="number" />
+
+        </div>
+        <br>
+
+        <div class="form-field">
+            <h3>Price</h3>
+            <div>
+                <span class="symbol">$</span>
+                <input id="dollars" name="dollars" class="input" size="2" type="number" />
+                <span>.</span>
+                <input id="cents" name="cents" class="input" size="2" maxlength="2" type="number" />
+
+            </div>
+        </div>
+            <br>
+
+
+            <input id="submit" class="button" type="submit" name="submit" value="Add" />
+
+    </form>
+
+</html>

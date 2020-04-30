@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration</title>
+</head>
+
+<body>
+    <h1> Register with The Club Sandwich</h1>
+    <form id="reg_form" class="forminput" method="POST" action="http://localhost:8081/register">
+        <div class="form_description">
+            <h2>Please enter these essential details to create an account with The Club Sandwich</h2>
+        </div>
+        <br>
+
+        <div class="form-field">
+            <h3>Name</h3>
+            <span>
+                <label>First Name </label>
+                <input id="firstname" name="firstname" class="input" type="text" required />
+            </span>
+            <span>
+                <label>Last Name </label>
+                <input id="lastname" name="lastname" class="input" type="text" required />
+            </span>
+        </div>
+        <br>
+        <div class="form-field">
+            <h3>Password</h3>
+            <input id="pass" name="pass" class="input" type="password" required />
+        </div>
+        <br>
+        <div class="form-field">
+            <h3>Email</h3>
+            <input id="email" name="email" class="input" type="email" required />
+        </div>
+        <br>
+        <div class="form-field">
+            <h3>Phone number</h3>
+            <input id="phone" name="phone" class="input" type="number" required />
+        </div>
+        <br>
+
+        <fieldset class="form-field">
+            <legend>
+                <h3>Address</h3>
+            </legend>
+
+            <div class="form-field">
+                <label for="street">Street Address</label>
+                <input id="street" name="street" class="input" type="text">
+            </div>
+            <br>
+
+            <div class="form-field">
+                <label for="address2">Address Line 2</label>
+                <input id="addline2" name="addline2" class="input" type="text">
+            </div>
+            <br>
+
+            <div class="form-field">
+                <label for="city">City</label>
+                <input id="city" name="city" class="input" type="text">
+            </div>
+            <br>
+
+            <div class="form-field">
+                <label for="region">State / Province / Region</label>
+                <input id="region" name="region" class="input" type="text">
+            </div>
+            <br>
+
+            <div class="form-field">
+                <label for="zipcode">Postal / Zip Code</label>
+                <input id="zipcode" name="zipcode" class="input" maxlength="10" type="number">
+            </div>
+            <br>
+        </fieldset>
+
+        <br>
+        <input id="submit" class="button" type="submit" name="submit" value="Register" />
+
+    </form>
+</body>
+
+</html>

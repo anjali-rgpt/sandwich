@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Order Page</title>
+</head>
+
+<body>
+    <h1> Build your Order!</h1>
+    <form id="reg_form" class="forminput" method="POST" action="http://localhost:8081/order">
+        <div class="form_description">
+            <h2>Build your Sandwich and click add to cart to add it. Click Next to
+                proceed to Drinks.</h2>
+        </div>
+        <br>
+
+        <fieldset>
+            <legend>
+                <h3>1. Type</h3>
+            </legend>
+            <div class="form-field">
+                <h4>Vegetarian</h4>
+                {% for key, value in veg.items() %}
+                <input id={{key}} name="filling" class="radio" type="radio" value={{key}}>{{key}} - {{value}}<br>
+                {% endfor %}
+            </div>
+
+            <div class="form-field">
+                <h4>Non-Vegetarian</h4>
+                {% for key, value in nonveg.items() %}
+                <input id={{key}} name="filling" class="radio" type="radio" value={{key}}>{{key}} - {{value}}<br>
+                {% endfor %}
+            </div>
+
+        </fieldset>
+        <br>
+
+        <div class="form-field">
+            <h3>2. Bread</h3>
+            <label for="bread">Select your type of bread </label>
+            <div class="selection">
+                <select class="dropdown" id="bread" name="bread">
+                    <option value="wheatbread">Wheat Bread</option>
+                    <option value="milkbread">Milk Bread</option>
+                    <option value="italian">Italian bread</option>
+
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="form-field">
+            <h3>3. Vegetables</h3>
+            <label for="bread">Select vegetables of your choice </label>
+            <br>
+
+            {% for key, value in vegetables.items() %}
+            <input id={{key}} name="veggie" class="check" type="checkbox" value={{key}}>{{key}} - {{value}}<br>
+            {% endfor %}
+        </div>
+
+        <div class="form-field">
+            <h3>4. Condiments</h3>
+            <label for="bread">Add your condiments </label>
+            <br>
+
+            {% for key, value in condiments.items() %}
+            <input id={{key}} name="condiment" class="check" type="checkbox" value={{key}}>{{key}} - {{value}}<br>
+            {% endfor %}
+        </div>
+        <br>
+        <div class="form-field">
+            <span class="button-body">
+                <input type="submit" name="order" value="Add to Cart">
+            </span>
+            <span class="button-body">
+                <input type="submit" name="order" value="Drinks ->">
+            </span>
+        </div>
+        <br>
+    </form>
+</body>
+
+</html>
